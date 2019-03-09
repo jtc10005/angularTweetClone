@@ -51,7 +51,10 @@ export class NewPostComponent implements OnInit, OnDestroy {
     this.ngUnsubscribe.complete();
   }
   SavePost() {
+    this.tags = [];
     this.postForm.reset();
   }
-  CancelPost() {}
+  CancelPost() {
+    this.tags = [];
+  }
 }

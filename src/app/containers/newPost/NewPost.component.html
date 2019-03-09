@@ -12,13 +12,17 @@
             matInput
             placeholder="Post Content"
             formControlName="text"
+            rows="3"
           ></textarea>
         </mat-form-field>
-<ul>
+    <mat-chip-list>
+        <mat-chip color="accent" *ngFor="let tag of tags" selected>{{tag}}</mat-chip>
+    </mat-chip-list>
+        <!-- <ul>
     <li *ngFor="let tag of tags">
         {{tag}}
     </li>
-</ul>
+</ul> -->
         <!-- <pre>
       {{ postForm?.value | json }}
     </pre> -->
