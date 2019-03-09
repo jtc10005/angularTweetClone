@@ -9,12 +9,19 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { AppEffects } from './store/effects/app.effects';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './materialModule';
-import { HomeComponent, ListComponent } from './containers';
-import {MenulistComponent} from './directives';
+import { HomeComponent, ListComponent, NewPostComponent } from './containers';
+import { MenulistComponent } from './directives';
+
 @NgModule({
-  declarations: [AppComponent, HomeComponent, MenulistComponent, ListComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    MenulistComponent,
+    ListComponent,
+    NewPostComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -27,7 +34,8 @@ import {MenulistComponent} from './directives';
     !environment.production ? StoreDevtoolsModule.instrument() : [],
     BrowserAnimationsModule,
     MaterialModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

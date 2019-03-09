@@ -5,7 +5,7 @@
   Angular Tweet</mat-toolbar
 >
 <mat-sidenav-container>
-  <mat-sidenav mode="side" opened *ngIf="showSideNav" >
+  <mat-sidenav mode="side" opened *ngIf="showSideNav" class="MenuContent">
     <menuList-component (MenuClickEvent)="showSideNav = false"></menuList-component>
   </mat-sidenav>
   <mat-sidenav-content class="MainContent">

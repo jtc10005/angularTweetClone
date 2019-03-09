@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 
-import {HomeComponent, ListComponent} from './containers';
+import {HomeComponent, ListComponent, NewPostComponent} from './containers';
 import { IRoutes, RouterModule } from './models/iRoutes';
 export const routes: IRoutes = [
   {
@@ -16,6 +16,13 @@ export const routes: IRoutes = [
     component: ListComponent,
     showInMenu: true,
     menuText: 'List'
+  },
+  {
+    path: 'new',
+    pathMatch: 'full',
+    component: NewPostComponent,
+    showInMenu: true,
+    menuText: 'Post New'
   }
 ];
 

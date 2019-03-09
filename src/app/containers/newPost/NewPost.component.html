@@ -1,0 +1,32 @@
+<div class="card-div">
+  <form [formGroup]="postForm" (ngSubmit)="SavePost()">
+    <mat-card>
+      <mat-card-title>Post New</mat-card-title>
+      <mat-card-content>
+        <!-- <mat-form-field >
+                      <input matInput placeholder="Post Text" value="Sushi">
+                    </mat-form-field> -->
+
+        <mat-form-field class="full-width">
+          <textarea
+            matInput
+            placeholder="Post Content"
+            formControlName="text"
+          ></textarea>
+        </mat-form-field>
+<ul>
+    <li *ngFor="let tag of tags">
+        {{tag}}
+    </li>
+</ul>
+        <!-- <pre>
+      {{ postForm?.value | json }}
+    </pre> -->
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button type="submit" [disabled]="postForm.invalid">Save</button>
+        <button mat-button type="reset" (click)="CancelPost()">Cancel</button>
+      </mat-card-actions>
+    </mat-card>
+  </form>
+</div>
