@@ -1,7 +1,24 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
 
-const routes: Routes = [];
+import {HomeComponent, ListComponent} from './containers';
+import { IRoutes, RouterModule } from './models/iRoutes';
+export const routes: IRoutes = [
+  {
+    path: '',
+    pathMatch: 'full',
+    component: HomeComponent,
+    showInMenu: true,
+    menuText: 'Home'
+  },
+  {
+    path: 'list',
+    pathMatch: 'full',
+    component: ListComponent,
+    showInMenu: true,
+    menuText: 'List'
+  }
+];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
